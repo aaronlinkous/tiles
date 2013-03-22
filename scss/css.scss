@@ -1,0 +1,57 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.container {
+	width: 650px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.column {
+	-webkit-transition: all .25s ease-out;
+	position: absolute;
+	z-index: 1;
+	width: 300px;
+
+	.tile {
+		-webkit-transition: all .25s ease-out;
+		margin-top: 0;
+		margin-bottom: 50px;
+		height: 200px;
+		width: 300px;
+		clear: both;
+
+		&.moved {
+			margin-top: 250px;
+		}
+
+		&.active {
+			width: 650px;
+		}
+	}
+
+	&.left {
+		left: 0;
+
+		.tile {
+			background-color: green;
+			float: left;
+		}
+	}
+
+	&.right {
+		right: 0;
+
+		.tile {
+			background-color: blue;
+			float: right;
+		}
+	}
+
+	&.active {
+		z-index: 2;
+	}
+}

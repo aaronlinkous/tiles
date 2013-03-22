@@ -1,0 +1,60 @@
+/* line 1, ../scss/css.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* line 7, ../scss/css.scss */
+.container {
+  width: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 13, ../scss/css.scss */
+.column {
+  -webkit-transition: all .25s ease-out;
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+}
+/* line 19, ../scss/css.scss */
+.column .tile {
+  -webkit-transition: all .25s ease-out;
+  margin-top: 0;
+  margin-bottom: 50px;
+  height: 200px;
+  width: 300px;
+  clear: both;
+}
+/* line 27, ../scss/css.scss */
+.column .tile.moved {
+  margin-top: 250px;
+}
+/* line 31, ../scss/css.scss */
+.column .tile.active {
+  width: 650px;
+}
+/* line 36, ../scss/css.scss */
+.column.left {
+  left: 0;
+}
+/* line 39, ../scss/css.scss */
+.column.left .tile {
+  background-color: green;
+  float: left;
+}
+/* line 45, ../scss/css.scss */
+.column.right {
+  right: 0;
+}
+/* line 48, ../scss/css.scss */
+.column.right .tile {
+  background-color: blue;
+  float: right;
+}
+/* line 54, ../scss/css.scss */
+.column.active {
+  z-index: 2;
+}
